@@ -13,23 +13,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --yellow: hsl(47, 88%, 63%);
+      --white: hsl(0, 0%, 100%);
+      --gray: hsl(0, 0%, 42%);
+      --black: hsl(0, 0%, 7%);
+    }
+
     body {
       font-family: "Figtree", sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      background-color: hsl(47, 88%, 63%);
+      min-height: 100vh;
+      background-color: var(--yellow);
     }
 
     .card {
       max-width: 300px;
       width: 90%;
-      background-color: white;
-      border: 2px solid black;
+      background-color: var(--white);
+      border: 2px solid var(--black);
       border-radius: 10px;
       padding: 20px;
-      box-shadow: 10px 10px 0px black;
+      box-shadow: 10px 10px 0px var(--black);
     }
 
     .illustrator {
@@ -39,7 +46,7 @@
     }
 
     .tag {
-      background-color: hsl(47, 88%, 63%);
+      background-color: var(--yellow);
       border-radius: 5px;
       width: 62px;
       padding: 7px;
@@ -50,8 +57,13 @@
       font-size: 20px;
     }
 
+    .heading:hover {
+      color: var(--yellow);
+      cursor: pointer;
+    }
+
     .content {
-      color: gray;
+      color: var(--gray);
       margin-bottom: 30px;
     }
 
@@ -74,7 +86,7 @@
 </head>
 <body>
 
-  <main class="card">
+  <article class="card">
     <img src="./assets/images/illustration-article.svg" alt="Illustration representing HTML and CSS foundations" class="illustrator">
     
     <div class="tag">Learning</div>
@@ -92,7 +104,7 @@
       
       <span class="name">Greg Hooper</span>
     </section>
-  </main>
+  </article>
 
   <!-- <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
